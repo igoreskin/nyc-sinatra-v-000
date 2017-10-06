@@ -1,12 +1,12 @@
 <table>
 
   <th>Name</th>
-  <th>Year Completed</th>
 
+  <% @figures.each do |figure| %>
   <tr>
-    <% @figures.each do |figure| %>
-      <td><a href="/figures/<%= figure.id %>"><%= figure.name %></a></td>
-    <% end %>
+    <td><a href="/figures/<%= figure.id %>"><%= figure.name %></a></td>
   </tr>
+  <% end %>
+
 
 </table>
